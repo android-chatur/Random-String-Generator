@@ -41,6 +41,7 @@ class StringViewModel(application: Application) : AndroidViewModel(application) 
 
     fun clearAllStrings() {
         _generatedStrings.value = emptyList()
+
     }
 
     fun deleteString(generatedString: GeneratedString) {

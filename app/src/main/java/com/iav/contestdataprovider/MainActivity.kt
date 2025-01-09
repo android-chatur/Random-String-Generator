@@ -1,5 +1,6 @@
 package com.iav.contestdataprovider
 
+import android.opengl.Visibility
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
@@ -28,7 +29,12 @@ class MainActivity : AppCompatActivity() {
         binding.lifecycleOwner = this
 
         viewModel.generatedStrings.observe(this, Observer { strings ->
+
+            binding.btnClearAll.visibility = if (strings.isNotEmpty()) View.VISIBLE else View.GONE
+
+            binding.etLength.setText("")
             binding.rvGeneratedStrings.adapter = GeneratedStringAdapter(this, strings, viewModel)
+
         })
     }
 
@@ -37,5 +43,10 @@ class MainActivity : AppCompatActivity() {
         length?.let {
             viewModel.fetchRandomString(it)
         }
+    }
+
+    fun onClearAllClick(view: View) {
+        // Clear the list in the ViewModel or Adapter
+        viewModel.clearAllStrings()
     }
 }
