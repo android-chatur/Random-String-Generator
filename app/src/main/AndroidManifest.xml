@@ -16,7 +16,7 @@
 
 
         <activity
-            android:name=".MainActivity"
+            android:name=".view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,7 +26,7 @@
         </activity>
 
         <provider
-            android:name=".RandomStringContentProvider"
+            android:name=".data.RandomStringContentProvider"
             android:authorities="com.iav.contestdataprovider"
             android:readPermission="com.iav.contestdataprovider.READ"
             android:writePermission="com.iav.contestdataprovider.WRITE"

@@ -1,4 +1,4 @@
-package com.iav.contestdataprovider
+package com.iav.contestdataprovider.data
 
 import android.content.ContentProvider
 import android.content.ContentValues

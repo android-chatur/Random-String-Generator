@@ -1,10 +1,12 @@
-package com.iav.contestdataprovider
+package com.iav.contestdataprovider.view.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.iav.contestdataprovider.databinding.ItemGeneratedStringBinding
+import com.iav.contestdataprovider.model.GeneratedString
+import com.iav.contestdataprovider.viewmodel.StringViewModel
 
 class GeneratedStringAdapter(
     private val context: Context,

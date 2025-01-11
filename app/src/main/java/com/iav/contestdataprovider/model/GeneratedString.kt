@@ -1,4 +1,4 @@
-package com.iav.contestdataprovider
+package com.iav.contestdataprovider.model
 
 data class GeneratedString(
     val value: String,

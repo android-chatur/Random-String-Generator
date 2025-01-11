@@ -3,76 +3,73 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
-            type="com.iav.contestdataprovider.StringViewModel" />
+            type="com.iav.contestdataprovider.viewmodel.StringViewModel" />
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp"
         android:orientation="vertical"
-        tools:context=".MainActivity">
+        android:padding="16dp"
+        tools:context=".view.MainActivity">
 
         <EditText
             android:id="@+id/et_length"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_edittext_background"
             android:hint="@string/enter_length"
             android:inputType="number"
-            android:layout_marginBottom="16dp"
             android:padding="12dp"
-            android:textColor="@color/black"
-            android:background="@drawable/rounded_edittext_background"
-            android:layout_alignParentTop="true" />
+            android:textColor="@color/black" />
 
 
         <Button
             android:id="@+id/btn_generate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/generate_strings"
-            android:layout_below="@id/et_length"
             android:layout_marginBottom="16dp"
-            android:textSize="18sp"
-            android:onClick="onGenerateClick"
             android:backgroundTint="@color/button_color"
-            android:textColor="@android:color/white"
+            android:elevation="4dp"
+            android:onClick="onGenerateClick"
             android:padding="12dp"
-            android:elevation="4dp" />
+            android:text="@string/generate_strings"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
         <Button
             android:id="@+id/btn_clear_all"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/clear_all"
-            android:textSize="16sp"
             android:layout_gravity="right"
+            android:backgroundTint="@color/button_color"
+            android:elevation="4dp"
             android:gravity="center"
             android:onClick="onClearAllClick"
-android:visibility="gone"
-            android:paddingHorizontal="30dp"
-            android:backgroundTint="@color/button_color"
-            android:textColor="@android:color/white"
             android:padding="12dp"
-            android:elevation="4dp" />
+            android:paddingHorizontal="30dp"
+            android:text="@string/clear_all"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:visibility="gone" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_generated_strings"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/btn_generate"
-            android:layout_above="@id/view_padding"
             android:layout_marginBottom="16dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:padding="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/item_generated_string" />
 
 
         <View
             android:id="@+id/view_padding"
             android:layout_width="match_parent"
-            android:layout_height="16dp"
-            android:layout_alignParentBottom="true" />
+            android:layout_height="16dp" />
     </LinearLayout>
 </layout>

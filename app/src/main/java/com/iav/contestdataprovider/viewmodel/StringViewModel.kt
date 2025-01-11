@@ -1,4 +1,4 @@
-package com.iav.contestdataprovider
+package com.iav.contestdataprovider.viewmodel
 
 import android.app.Application
 import android.net.Uri
@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.iav.contestdataprovider.model.GeneratedString
 import org.json.JSONObject
 
 class StringViewModel(application: Application) : AndroidViewModel(application) {

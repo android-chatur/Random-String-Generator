@@ -5,11 +5,11 @@
 
         <variable
             name="generatedString"
-            type="com.iav.contestdataprovider.GeneratedString" />
+            type="com.iav.contestdataprovider.model.GeneratedString" />
 
         <variable
             name="viewModel"
-            type="com.iav.contestdataprovider.StringViewModel" />
+            type="com.iav.contestdataprovider.viewmodel.StringViewModel" />
     </data>
 
     <LinearLayout
@@ -20,7 +20,7 @@
         android:elevation="4dp"
         android:orientation="vertical"
         android:padding="16dp"
-        tools:context=".GeneratedStringAdapter">
+        tools:context=".view.adapter.GeneratedStringAdapter">
 
         <TextView
             android:id="@+id/tv_random_string"
